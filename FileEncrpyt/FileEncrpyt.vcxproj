@@ -131,6 +131,7 @@
     <ClInclude Include="crpyt.hpp" />
     <ClInclude Include="IO.hpp" />
     <ClInclude Include="task.hpp" />
+    <ClInclude Include="threadManager.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crpyt.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="processManager.cpp" />
     <ClCompile Include="processManager.hpp" />
     <ClCompile Include="readEnv.cpp" />
+    <ClCompile Include="threadManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".env" />

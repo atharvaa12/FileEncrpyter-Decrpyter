@@ -20,11 +20,13 @@ struct task {
 	 std::string toString() const {
 		std::ostringstream oss;
 		oss<<filePath<<","<<(taskType==action::ENCRYPT?"ENCRYPT":"DECRYPT");
-		return oss.str();
+		std::string response=oss.str();
+		oss.str("");
+		return response;
 
 		
 	}
-	static task fromString(const std::string& str) {
+	static task fromString(const std::string str) {
 		std::istringstream iss(str);
 		std::string path;
 		std::string actionstr;

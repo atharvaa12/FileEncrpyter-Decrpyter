@@ -4,7 +4,7 @@
 #include "IO.hpp"
 #include "readEnv.cpp"
 
-int executeCrpyt(const std::string& taskData)
+int executeCrpyt(const std::string taskData)
 {
 	task currentTask=task::fromString(taskData);
 	
