@@ -13,7 +13,7 @@ int executeCrpyt(const std::string taskData)
 	if (currentTask.taskType == action::ENCRYPT) {
 		char ch;
 		while(currentTask.fileStream.get(ch)) {
-			std::cout << "encrypting " << ch << std:: endl;
+		//	std::cout << "encrypting " << ch << std:: endl;
 			ch=(ch+key)%256;
 			currentTask.fileStream.seekp(-1, std::ios::cur);	
 			currentTask.fileStream.put(ch);
@@ -32,6 +32,7 @@ int executeCrpyt(const std::string taskData)
 		currentTask.fileStream.close();
 
 	}
+
 	return 0;
 
 	

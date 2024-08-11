@@ -3,14 +3,24 @@
 #include<vector>
 #include <thread>
 #include <string>
-
+#include<functional>
+#include <mutex>
+#include <queue>
 class threadManager {
 private:
-	static std::vector<std::unique_ptr<std::thread>>threads;
+	std::vector<std::thread>threads;
+	std::queue<std::function<void()>>jobQueue;
+	std::mutex jobQueueMutex;
+	std::condition_variable jobQueueCondition;
+	bool stop;
+	void getJob();
+
+	
 public:
-	threadManager();
-	void  addThread( std::string dataForThread);
+	threadManager(size_t threadPoolSize);
+	void  addJob( std::string dataForThread);
 	void  joinAllThreads();
+	
 		
 	
 	

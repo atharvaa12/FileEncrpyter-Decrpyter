@@ -15,13 +15,14 @@ return true;
 
 void processManager::executeTasks()
 {
-	threadManager threads;
+		threadManager tManager(3);
 		while(!taskQueue.empty()) {
 			std::unique_ptr<task> currentTask=std::move(taskQueue.front());
 			taskQueue.pop();
 			std::cout<<"Executing task: "<<currentTask->toString()<<std::endl;
-			threads.addThread(currentTask->toString());
+			tManager.addJob(currentTask->toString());
 		}
-		threads.joinAllThreads();
+		tManager.joinAllThreads();
+		std::cout<<"All tasks executed"<<std::endl;
 	
 }
