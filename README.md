@@ -40,6 +40,3 @@ This C++ tool uses the Caesar cipher to encrypt and decrypt files and directorie
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.
 
----
-
-Feel free to adjust any details as needed!
