@@ -12,18 +12,12 @@ This C++ tool uses the Caesar cipher to encrypt and decrypt files and directorie
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/file-encrypter-decrypter.git
+   git clone https://github.com/atharvaa12/FileEncrpyter-Decrpyter.git
    ```
 
-2. **Navigate to the project directory:**
-   ```bash
-   cd file-encrypter-decrypter
-   ```
 
-3. **Build the project:**
-   ```bash
-   g++ -std=c++17 -o file_encrypter_decrypter main.cpp
-   ```
+2. **Build the project**
+  
 
 ## Usage
 
